@@ -1,0 +1,54 @@
+$font1: 'Poppins', sans-serif;
+$font2: 'Montserrat', sans-serif;
+
+$sidebar_text_color: #fff;
+$sidebar_font-size: 26px;
+$white: #fff;
+$text: #7a808d;
+$title: #011a3e;
+
+$mobile_hamburger_color: #074C5F;
+
+$theme_color: #feb000;
+
+// Responsive Variables
+$sm: 'only screen and (min-width: 576px) and (max-width: 767px)';
+$md:'only screen and (min-width: 768px) and (max-width: 991px)';
+$lg : 'only screen and (min-width: 992px) and (max-width: 1200px)';
+$laptop: 'only screen and (min-width: 1200px)';
+$xs:'(max-width: 767px)';
+
+// Global Fonts
+
+$header1-font-color: #011114;
+
+.sm-pageheader-typography {
+    color: #011114;
+    font-size: 24px;
+    font-family: $font1;
+}
+
+.md-pageheader-typography {
+    color: #011114;
+    font-size: 24px;
+    font-family: $font1;
+}
+
+.lg-pageheader-typography {
+    color: #011114;
+    font-size: 24px;
+    font-family: $font1;
+}
+
+.laptop-pageheader-typography {
+    color: #011114;
+    font-size: 24px;
+    font-family: $font1;
+}
+
+
+// $laptop: 'only screen and (min-width: 1200px)';
+// $lg : 'only screen and (min-width: 992px) and (max-width: 1200px)';
+// $md:'only screen and (min-width: 768px) and (max-width: 991px)';
+// $xs:'(max-width: 767px)';
+// $sm: 'only screen and (min-width: 576px) and (max-width: 767px)';

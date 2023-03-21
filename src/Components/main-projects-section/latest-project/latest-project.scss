@@ -1,0 +1,33 @@
+@import "../../../scss/variables.scss";
+
+@media #{$xs} {
+    .card-media-img {
+        height: 100%;
+        width: 100%;
+        align-items: center;
+    }
+
+    .card-content {
+        background-color: #07435F;
+        opacity: 5%;
+    }
+    .background-card-typography {
+        font-size: 1.5rem;
+    }
+}
+
+@media #{$md} {
+    .card-media-img {
+        height: 100%;
+        width: 100%;
+        align-items: center;
+    }
+
+    .card-content {
+        background-color: #07435F;
+        opacity: 5%;
+    }
+    .background-card-typography {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,221 @@
+@import "../../scss/variables.scss";
+
+
+@media #{$xs} {
+	.portfolio-header-area {
+		position: relative;	
+		margin-top: 100px;
+        
+        // background-color: aqua;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        .portfolio-main-header {
+            text-align: center;
+            display: block;
+			font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .portfolio-main-summary {
+            text-align: left;
+            display: block;
+			font-size: 16px;
+            margin-top: 20px;
+        }
+    }
+
+   
+}
+
+@media #{$sm} {
+	.portfolio-header-area {
+		position: relative;	
+		margin-top: 100px;
+        
+        // background-color: aqua;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        .portfolio-main-header {
+            text-align: center;
+            display: block;
+			font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .portfolio-main-summary {
+            text-align: left;
+            display: block;
+			font-size: 16px;
+            margin-top: 20px;
+        }
+    }
+}
+
+
+@media #{$md} {
+	.portfolio-header-area {
+		display: flex;
+		align-content: space-evenly;
+		text-align: center;
+		position: relative;	
+		flex-direction: row;
+		margin-top: 90px;
+        background-color: rgb(149, 12, 58);
+    }
+}
+
+
+@media #{$lg} {
+    .portfolio-header-area {
+		position: relative;	
+		margin-top: 100px;
+        padding-left: 55px;
+        padding-right: 55px;
+       
+        .portfolio-main-header {
+            margin-top: 150px;
+            text-align: center;
+            display: block;
+			font-size: 36px;
+            margin-bottom: 50px;
+
+        }
+
+        .portfolio-main-summary {
+            text-align: left;
+            display: block;
+			font-size: 24px;
+            //margin-top: 20px;
+            // padding: 30px;
+        }
+    }
+}
+
+
+@media #{$laptop} {
+    .portfolio-header-area {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        // background-color: chartreuse;
+       
+        .portfolio-main-header {
+            display: flex;
+            margin-top: 150px;
+            text-align: center;
+			font-size: 36px;
+            margin-bottom: 50px;
+            max-width: 1075px;
+        }
+
+        .portfolio-main-summary {
+            display: flex;
+            max-width: 1075px;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            text-align: left;
+			font-size: 24px;
+        }
+    }
+}
+
+
+
+
+/* PROJECTS AREA */
+
+.portfolio-projects-area {
+    margin-top: 30px;
+    max-width: 1155px;
+    min-width: 385px;
+    
+    /* IPHONE 12 */
+    @media #{$xs} {
+        .portfolio-projects-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            // background-color: aquamarine;
+            justify-content: center;
+    
+            .project {
+                padding: 20px;
+
+            }
+        }
+    }
+
+    /* NEED TO FIND SCREEN */
+    @media #{$sm} {
+        .portfolio-projects-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            background-color: aquamarine;
+
+            .project {
+                padding: 20px;
+
+            }
+        }
+    }
+
+    /* NEED TO FIND SCREEN */
+    @media #{$md} {
+        .portfolio-projects-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            background-color: green;
+
+            .project {
+                padding: 20px;
+
+            }
+        }
+    }
+
+    /* IPAD PORTRAID */
+    @media #{$lg} {
+        .portfolio-projects-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            align-content: center;
+            // background-color: red;
+            justify-content: center;
+
+            .project {
+                padding: 20px;
+
+            }
+        }
+    }
+
+    @media #{$laptop} {
+        .portfolio-projects-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            align-content: center;
+            // background-color: red;
+            justify-content: center;
+
+            .project {
+                padding: 20px;
+
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+
+.blockColor {
+    height: 130px;
+    background-color: yellow;
+}
+
+.project-sticky-box {
+    background-color: #1C190B;
+    padding-top: 15px;
+    padding-left: 15px;
+    opacity: 0.9;
+    height: 190px;
+    width: 90px;
+    text-align: center;
+    margin-left: 10px;
+
+    .text-label {
+        text-align: center;
+        color: white;
+        font-size: 14px;
+        padding-bottom: 15px;
+    }
+}

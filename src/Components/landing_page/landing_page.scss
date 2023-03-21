@@ -1,0 +1,332 @@
+@import "../../scss/variables.scss";
+
+@media #{$xs}{
+	.main-baner-area {
+		display: flex;
+		align-content: space-evenly;
+		text-align: center;
+		position: relative;	
+		flex-direction: row;
+		margin-top: 90px;
+
+		.aae-banner {
+			//position: absolute;
+			top: 10%;
+			padding: 10px 0;
+
+			.banner-photo { 
+				display: block;
+			}
+	
+			#banner-image-dimension {
+				width: 70%;
+				height: auto;
+			}
+	
+			.heading-info {
+				
+				// display: block;
+				position: relative;
+				text-align: center;
+				margin-top: 20px;
+			
+				.heading-primary-intro {
+					
+					display: block;
+					font-size: 16px;
+					margin-bottom: 1rem;
+					color: #011114;
+				}
+				
+				.heading-primary-main {
+					display: block;
+					font-size: 24px;
+					font-weight: 700;
+					margin-bottom: 5px;
+					color: #074C5F;
+				}
+	
+				.heading-primary-sub {
+					padding: 35px;
+					text-align: left;
+					display: block;
+					font-size: 18px;
+					color: #011114;
+				}
+
+				.contact-area {
+					display: block;
+				}
+			}
+		}
+	}
+
+	.sphere-shape {
+		position: absolute;
+		top: 65%;
+		float: left;
+		width: 250px;
+		height: 250px;
+		margin: 20px;
+		margin: -20px;
+		shape-outside: circle(50% at 30%);
+		clip-path: circle(50% at 30%);
+		background-image: linear-gradient( #FCD561, #A0B6CC);
+		opacity: 30%;
+	
+	}	
+}
+
+@media #{$md} {
+	.main-baner-area {
+		text-align: center;
+
+		.sphere-shape {
+			position: absolute;
+			top: 13%;
+			float: left;
+			width: 380px;
+			height: 380px;
+			margin-left: -70px;
+			shape-outside: circle(50% at 30%);
+			clip-path: circle(50% at 30%);
+			background-image: linear-gradient( #FCD561, #A0B6CC);
+			opacity: 30%;
+		
+		}	
+
+		.aae-banner {
+			position: relative;		
+			display: flex;
+			flex-direction: row-reverse;
+			width: 100%;
+			position: relative;
+			align-content: space-evenly;
+			margin-left: 25px;
+			
+	
+			.banner-photo { 
+				display: block;
+				margin-top: 130px;
+				width: 490px;
+			}
+	
+			#banner-image-dimension {
+				width: 85%;
+				height: auto;
+			}
+	
+			.heading-info {
+				//background-color: #9bc850;
+				display: block;
+				position: relative;
+				text-align: left;
+				width: 50%;
+				margin-top: 20%;
+
+
+			
+				.heading-primary-intro {
+					display: block;
+					font-size: 18px;
+					margin-bottom: 1rem;
+					
+				}
+				
+				.heading-primary-main {
+					display: block;
+					font-size: 33px;
+					font-weight: 800;
+					margin-bottom: 35px;
+					color: #074C5F;
+				}
+	
+				.heading-primary-sub {
+					//padding: 35px;
+					text-align: left;
+					display: block;
+					font-size: 18px;
+					width: 85%;				
+				}
+			}
+		}
+		
+	}	
+}
+
+
+// High Resolution Tablets
+@media #{$lg}{
+	.main-baner-area {
+		// display: flex;
+		// align-content: space-evenly;
+		// text-align: center;
+		//position: absolute
+		margin-top: 100px;
+		top: 10%;
+		position: relative;
+		
+		.sphere-shape {
+			position: absolute;
+			top: 18%;
+			float: left;
+			width: 380px;
+			height: 380px;
+			margin-left: -70px;
+			shape-outside: circle(50% at 30%);
+			clip-path: circle(50% at 30%);
+			background-image: linear-gradient( #FCD561, #A0B6CC);
+			opacity: 30%;
+		
+		}	
+
+		.aae-banner {
+			position: absolute;	
+	
+			display: flex;
+			flex-direction: row-reverse;
+			width: 100%;
+			position: relative;
+			align-content: space-evenly;
+			margin-left: 25px;
+			
+	
+			.banner-photo { 
+				display: block;
+				margin-top: 30px;
+				width: 490px;
+			}
+	
+			#banner-image-dimension {
+				width: 100%;
+				height: auto;
+			}
+	
+			.heading-info {
+				//background-color: #9bc850;
+				display: block;
+				//position: relative;
+				text-align: left;
+				width: 50%;
+				margin-top: 5%;
+				margin-bottom: 1rem;
+
+				.heading-primary-intro {
+					display: block;
+					font-size: 18px;
+					margin-bottom: 1px;
+					
+				}
+				
+				.heading-primary-main {
+					display: block;
+					font-size: 33px;
+					font-weight: 800;
+					margin-bottom: 35px;
+					color: #074C5F;
+				}
+	
+				.heading-primary-sub {
+					//padding: 35px;
+					text-align: left;
+					display: block;
+					font-size: 18px;
+					width: 85%;				
+				}
+			}
+		}
+		
+	}	
+}
+
+// Desktop size
+@media #{$laptop}{
+	.main-baner-area {
+		//background-color: #FCD561;
+		text-align: center;
+		//position: absolute
+		margin-top: 100px;
+		top: 12%;
+	
+		.sphere-shape {
+			position: absolute;
+			top: 13%;
+			left: 20%;
+			float: left;
+			width: 380px;
+			height: 380px;
+			//margin: 20px;
+			margin-left: -150px;
+			shape-outside: circle(50% at 30%);
+			clip-path: circle(50% at 30%);
+			background-image: linear-gradient( #FCD561, #A0B6CC);
+			opacity: 30%;
+		}	
+
+		.aae-banner {
+			position: relative;	
+			top: 10%;
+			display: flex;
+			flex-direction: row-reverse;
+			//width: 90%;
+			// position: relative;
+			justify-content: center;
+		
+			//margin-left: 1%;
+
+			#banner-image-dimension {
+				width: 100%;
+				height: auto;
+			}
+
+			.banner-photo { 
+				display: block;
+				margin-top: 30px;
+				width: 490px;
+			}
+
+			.heading-info {
+				
+				// display: block;
+				position: relative;
+				text-align:left;
+				margin-top: 100px;
+				margin-bottom: 1rem;
+				// width: 70%;
+				display: block;
+				min-width: 500px;
+				max-width: 500px;
+
+				float: left;
+			
+				.heading-primary-intro {
+					
+					display: block;
+					font-size: 18px;
+					margin-bottom: 25px;	
+				}
+				
+				.heading-primary-main {
+					display: block;
+					font-size: 33px;
+					font-weight: 800;
+					margin-bottom: 5px;
+					color: #074C5F;
+				}
+	
+				.heading-primary-sub {
+					padding: 5px;
+					text-align: left;
+					display: block;
+					font-size: 18px;
+				}
+
+				.contact-area {
+					//background-color: #FCD561;
+					display: block;
+					margin-top: 120px;
+				}
+			}
+		}
+	}
+}
