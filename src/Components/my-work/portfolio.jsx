@@ -13,16 +13,28 @@ function Portfolio()  {
     const [hasError, setHasError] = useState(false);
     const [error, setError] = useState();
 
-    useEffect(() => {
-        const docRef = doc(fsReference, 'projects_page', 'projects');
-        getDoc(docRef)
-            .then((doc) => {
-                setProjects(doc.data());
-                setIsLoading(false);
-            })
-            .catch(() => setError('error getting document'));
-    },[]);
+    useEffect(() => {      
+        const entriesQuery = query(
+            collection(fsReference, 'projects_data'),
+            orderBy('index', 'asc')
+        );
 
+        const unsubscribe = onSnapshot(
+            entriesQuery,
+            snapshot => {
+                setProjects(snapshot.docs);
+                setIsLoading(false);
+            },
+            error => {
+                console.log(error);
+                setIsLoading(false);
+                setHasError(true);
+            }
+        )
+
+        return () => unsubscribe();    
+    },[]);
+    
     if (isLoading) {
         return <p>loading...</p>
     }
@@ -42,18 +54,13 @@ function Portfolio()  {
                 {
                     Object.keys(projects).map( project => (
                         <div className='project'>
-                            <Project info={projects[project]} />
+                            <Project info={projects[project].data()} />
                         </div>
                     ))
                 }
                 </div>
                
             </div>
-
-           
-
-
-
         </section>
     );
 }

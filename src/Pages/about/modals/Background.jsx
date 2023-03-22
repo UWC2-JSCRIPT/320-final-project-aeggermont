@@ -17,28 +17,20 @@ const ModalBackground = () => {
             </a>
           </div>
         </div>
-        {/* End  PersonalInfo */}
-
         <div className="col-6 achievements-wrapper">
           <h3>Achievements</h3>
           <Achievements />
         </div>
-        {/* End  Achievements */}
       </div>
-      {/* End .row */}
-
       <div className="row resume-box">
         <div className="col-6">
           <h3>Experience</h3>
           <Experience />
         </div>
-        {/* End  Experience */}
-
         <div className="col-6">
           <h3>Education</h3>
           <Education />
         </div>
-        {/* End  Education */}
       </div>
     </>
   );

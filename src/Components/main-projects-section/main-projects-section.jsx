@@ -22,26 +22,35 @@ import fsReference from '../../firebase';
 import { useEffect, useState } from 'react';
 import { collection, where, getDoc, onSnapshot, orderBy, query, deleteDoc, doc, getDocs } from "firebase/firestore";;
 
-
-
+/*
+orderBy('index', 'asc')
+*/
 function MainProjectsSection() {
     const [projects, setProjects] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [hasError, setHasError] = useState(false);
     const [error, setError] = useState();
 
-    useEffect(() => {
-        // const q = query(doc(fsReference, "projects_page", "projects"), where("latestProject", "==", true));
-        const docRef = doc(fsReference, 'projects_page', 'projects');
-        getDoc(docRef)
-            .then((doc) => {
-        
-                //  console.log(doc.data());
-                setProjects(doc.data());
+    useEffect(() => {      
+        const entriesQuery = query(
+            collection(fsReference, 'projects_data'),
+            where("latestProject", "==", true),
+        );
+
+        const unsubscribe = onSnapshot(
+            entriesQuery,
+            snapshot => {
+                setProjects(snapshot.docs);
                 setIsLoading(false);
-            })
-            .catch(() => setError('error getting document'));
-        
+            },
+            error => {
+                console.log(error);
+                setIsLoading(false);
+                setHasError(true);
+            }
+        )
+
+        return () => unsubscribe();    
     },[]);
 
     const sm = 'only screen and (min-width: 576px) and (max-width: 767px)';
@@ -66,7 +75,6 @@ function MainProjectsSection() {
     if (hasError) {
         return <p>Has error!</p>
     }
-    
 
     const cardDimensions = function() { 
         let cardDimensions = {};
@@ -156,9 +164,9 @@ function MainProjectsSection() {
 
                         }}>
                         {
-                            Object.keys(projects).map( project => (
+                           Object.keys(projects).map( project => (
                                 <div className='project'>
-                                    <Project info={projects[project]} />
+                                    <Project info={projects[project].data()} />
                                 </div>
                             ))
                         }
@@ -170,10 +178,3 @@ function MainProjectsSection() {
 }
 
 export default MainProjectsSection;
-
-/*
-    <Stack spacing={2}>
-       <Pagination count={3} color="primary" />
-    </Stack>
-     <LatestProject info={mainProjectsSecion[0]} dimensions={cardDimensions()} />
-*/

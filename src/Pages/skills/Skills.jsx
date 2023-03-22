@@ -3,27 +3,35 @@ import React from "react";
 const skillsContent = [
   {
     name: "React.Js",
-    skillPercent: "95",
-  },
-  {
-    name: "Vue.Js",
     skillPercent: "80",
   },
   {
-    name: "Photoshop",
+    name: "Angular.Js",
+    skillPercent: "95",
+  },
+  {
+    name: "Django",
     skillPercent: "90",
+  },
+  {
+    name: "iOS",
+    skillPercent: "70",
   },
   {
     name: "Figma",
     skillPercent: "95",
   },
   {
-    name: "Illustrator",
-    skillPercent: "80",
+    name: "Python",
+    skillPercent: "90",
   },
   {
-    name: "WordPress",
+    name: "Typecript",
     skillPercent: "90",
+  },
+  {
+    name: "SwiftUI",
+    skillPercent: "70",
   },
 ];
 

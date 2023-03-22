@@ -1,6 +1,7 @@
 import React from 'react';
 import '../projects.scss';
-
+import pdfDocumentation from './StoryTellerDocumentation.pdf';
+import imgDocumentation from './StoryTeller.jpg';
 import StickyBoxPanel from '../../../sticky-box-panel/StickyBoxPanel';
 import ProjectRecommendations from '../../../project-recommendations/ProjectRecommendations';
 import fsReference from '../../../../firebase';
@@ -55,18 +56,18 @@ function Project1()  {
         return <p>Has error!</p>
     }
 
-    console.log('>>> Project Data <<<');
-    console.log(projectData);
-
     return (
         <div className="container">
             <div className='row'>
                 <div className="col-11">
-                    <Document file="/PassportBotPresentation.pdf" onLoadSuccess={onDocumentLoadSuccess} options={options}>
+                    <img src={imgDocumentation} width="1300" alt="Prject Sample" />
+                    {/* TODO: PDF reader did not work as expected so embedding an image for demo purposes
+                    <Document file={pdfDocumentation} onLoadSuccess={onDocumentLoadSuccess} options={options}>
                         {Array.from(new Array(numPages), (el, index) => (
                             <Page key={`page_${index + 1}`} pageNumber={index + 1} />
                         ))}
                     </Document>
+                    */}
                 </div>
                 <div className="col-1">
                     <StickyBoxPanel />       
